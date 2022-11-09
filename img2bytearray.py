@@ -2,7 +2,7 @@ from PIL import Image
 import sys
 
 def convert_to_bytearray(image: Image, width: int, height: int):
-    im_resize = im.resize((width,height))
+    im_resize = image.resize((width,height))
 
     buf = [0xFF] * (int(width/8) * height)
     pixels = im_resize.load()
